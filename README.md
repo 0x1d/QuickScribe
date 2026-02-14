@@ -1,20 +1,32 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# ⚡ QuickScribe
 
-# Run and deploy your AI Studio app
+> World-class real-time transcription and translation powered by Gemini Live.
 
-This contains everything you need to run your app locally.
+QuickScribe is a high-performance, low-latency transcription tool designed to capture and translate conversations in real-time. Built with a specialized focus on **Swiss German dialects**, it bridges the gap between spoken local vernacular and formal written language.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1MuR2iq9PwxLEsOwu8L9PvhLBXl53WizU
+## ✨ Key Features
 
-## Run Locally
+- **🔴 Live Transcription**: Experience zero-latency audio processing using the `gemini-2.5-flash-native-audio-preview` model.
+- **🇨🇭 Swiss German Mastery**: Specifically tuned to understand various Swiss German dialects and translate them into Standard German or English instantly.
+- **📂 Persistent Sessions**: Your conversations are automatically saved to local storage, allowing you to resume or reference them anytime.
+- **💾 Data Portability**: Export your full transcripts as structured JSON files with a single click.
+- **📱 Responsive & Elegant**: A minimalist, mobile-first design built with Tailwind CSS, featuring smooth auto-scrolling and real-time "Processing" feedback.
+- **🔐 Privacy First**: Audio is streamed directly to the Gemini API and processed in real-time without permanent server-side storage of raw audio files.
 
-**Prerequisites:**  Node.js
+## 🚀 Getting Started
 
+1. **Select a Language**: Choose your input dialect (e.g., Swiss German) and target output.
+2. **Hit Record**: Grant microphone permissions and start speaking.
+3. **Watch it Scribe**: Segments are finalized into complete sentences as you speak.
+4. **Manage History**: Rename sessions or delete old ones via the intuitive sidebar.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🛠️ Technology Stack
+
+- **React 19**: Modern component architecture.
+- **Google Gemini Live API**: Real-time multimodal (audio-to-text) interaction.
+- **Tailwind CSS**: Utility-first styling for a premium aesthetic.
+- **Web Audio API**: High-fidelity PCM audio capture at 16kHz.
+
+---
+
+*Developed by a Senior Frontend Engineer with a focus on cutting-edge AI integration.*

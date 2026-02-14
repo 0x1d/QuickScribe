@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Session, TranscriptSegment, ConnectionStatus } from '../types';
 import { GeminiLiveService } from '../services/geminiLiveService';
@@ -21,16 +22,13 @@ const LANGUAGES = [
 
 // Fix for window.aistudio type conflict: 
 // The environment already defines a global AIStudio interface.
-// We extend it with the required methods and use it for the Window property.
+// We extend it with the required methods. We don't need to redeclare 
+// it on Window if it's already provided by the environment, 
+// which avoids modifier mismatch errors.
 declare global {
   interface AIStudio {
     hasSelectedApiKey: () => Promise<boolean>;
     openSelectKey: () => Promise<void>;
-  }
-
-  interface Window {
-    /* Fixed: Removed readonly modifier to match existing global declaration */
-    aistudio: AIStudio;
   }
 }
 
