@@ -1,0 +1,7 @@
+{
+  "name": "QuickScribe",
+  "description": "Real-time audio transcription tool using Gemini Live API.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
